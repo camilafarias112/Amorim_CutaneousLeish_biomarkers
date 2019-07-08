@@ -1,0 +1,13 @@
+{
+	"n_targets": 8362,
+	"n_bootstraps": 60,
+	"n_processed": 4033585,
+	"n_pseudoaligned": 653,
+	"n_unique": 483,
+	"p_pseudoaligned": 0.0,
+	"p_unique": 0.0,
+	"kallisto_version": "0.46.0",
+	"index_version": 10,
+	"start_time": "Mon Jul  1 10:01:39 2019",
+	"call": "kallisto quant -i Leishmania_braziliensis_mhom_br_75_m2904.ASM284v2.cdna.all.index -o parasite_SRR3162873 -b 60 -t 24 SRR3162873_1_kneaddata.fastq SRR3162873_2_kneaddata.fastq"
+}

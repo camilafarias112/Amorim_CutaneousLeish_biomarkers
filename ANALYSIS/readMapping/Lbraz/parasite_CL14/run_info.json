@@ -1,0 +1,13 @@
+{
+	"n_targets": 8362,
+	"n_bootstraps": 60,
+	"n_processed": 10636911,
+	"n_pseudoaligned": 2996,
+	"n_unique": 2523,
+	"p_pseudoaligned": 0.0,
+	"p_unique": 0.0,
+	"kallisto_version": "0.46.0",
+	"index_version": 10,
+	"start_time": "Sat Jun 22 22:41:50 2019",
+	"call": "kallisto quant -i Leishmania_braziliensis_mhom_br_75_m2904.ASM284v2.cdna.all.index -o parasite_CL14 -t 24 -b 60 --single -l 250 -s 30 CL14_filtered.fastq"
+}

@@ -1,0 +1,20 @@
+---
+title: "<center> Supplemental code file for manuscript titled: Variable gene expression and parasite load predict treatment outcome in cutaneous leishmaniasis <center>"
+author: "<center> Camila Farias Amorim, Fernanda O. Novais, Ba Nguyen, Ana M. Misic, Lucas P. Carvalho, Edgar M. Carvalho, Daniel P. Beiting*, Phillip Scott* <center><br>"
+date: "<center> produced on _`r Sys.Date()`_ <center>"
+output:
+  html_document:
+    code_folding: hide
+    df_print: paged
+    theme: yeti
+    highlight: tango
+    toc: yes
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    number_sections: true
+  pdf_document:
+    fig_caption: yes
+    toc: yes
+---
+
