@@ -8,8 +8,12 @@ Patients infected with Leishmania braziliensis develop chronic lesions that ofte
 
 > The locations of the core components of this repo are outlined in the file system map below. In short, there are the following main directories:
 
- - /ANALYSIS/code - contains the Rmarkdown (.rmd) file the combines all code and outputs and was used to generate the supplementary code file included in the manuscript the pipeline.  In addition, code for manuscript figures based on RNAseq data are included in this document.
- - /ANALYSIS/readmapping - includes Kallisto outputs and log files
- - /QA/fastqc - includes outputs from running [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) on all raw fastq files.  Also contains a [multiqc](https://multiqc.info/) html summary report that summarizes fastqc and kallisto results.
+ - /ANALYSIS/code - contains the Rmarkdown (.rmd) file that combines all code and outputs and was used to generate the supplementary code file included in the manuscript the pipeline.  All code for manuscript figures based on RNAseq data are included in this document.
+ - /ANALYSIS/readMapping/human - includes Kallisto outputs and log files for mapping of raw fastq files from Amorim et al., (this study) to the human reference transcriptome.  This directory is listed in the .gitingore due to restrictions on file and repo size set by GitHub.
+  - /ANALYSIS/readMapping/Lbraz - Kallisto outputs and log files for mapping of de-hosted reads from Amorim *et al.* (this study) to the *L. braziliensis* reference transcriptome.
+ - /ANALYSIS/Christensen_plosNTD_2016/human - Kallisto outputs and log files for mapping of raw fastq files from Christensen *et al.*, to the human reference transcriptome.  This directory is listed in the .gitingore due to restrictions on file and repo size set by GitHub.
+ - /ANALYSIS/Christensen_plosNTD_2016/Lbraz - Kallisto outputs and log files for mapping of de-hosted reads from Christensen *et al.*, to the *L. braziliensis* reference transcriptome
+ - /QA/fastqc_Amorim - includes outputs from running [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) on all raw fastq files from Amorim *et al.* (this study).  Also contains a [multiqc](https://multiqc.info/) html summary report that summarizes fastqc and kallisto results.
+ - /QA/fastqc_Christensen - includes outputs from running [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) on all raw fastq files from Christensen *et al.*.  Also contains a [multiqc](https://multiqc.info/) html summary report that summarizes fastqc and kallisto results.
 
 ```
