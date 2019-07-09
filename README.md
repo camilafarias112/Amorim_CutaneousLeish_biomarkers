@@ -13,7 +13,11 @@ Patients infected with Leishmania braziliensis develop chronic lesions that ofte
   - /ANALYSIS/readMapping/Lbraz - Kallisto outputs and log files for mapping of de-hosted reads from Amorim *et al.* (this study) to the *L. braziliensis* reference transcriptome.
  - /ANALYSIS/Christensen_plosNTD_2016/human - Kallisto outputs and log files for mapping of raw fastq files from Christensen *et al.*, to the human reference transcriptome.  This directory is listed in the .gitingore due to restrictions on file and repo size set by GitHub.
  - /ANALYSIS/Christensen_plosNTD_2016/Lbraz - Kallisto outputs and log files for mapping of de-hosted reads from Christensen *et al.*, to the *L. braziliensis* reference transcriptome
- - /QA/fastqc_Amorim - includes outputs from running [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) on all raw fastq files from Amorim *et al.* (this study).  Also contains a [multiqc](https://multiqc.info/) html summary report that summarizes fastqc and kallisto results.
- - /QA/fastqc_Christensen - includes outputs from running [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) on all raw fastq files from Christensen *et al.*.  Also contains a [multiqc](https://multiqc.info/) html summary report that summarizes fastqc and kallisto results.
+ - /QA/fastqc_Amorim - includes outputs from running [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) on all raw fastq files from Amorim *et al.* (this study).
+ - /QA/fastqc_Christensen - includes outputs from running [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) on all raw fastq files from Christensen *et al.*.  
+ - /QA/multiqc_report_Amorim_host.html - [multiqc](https://multiqc.info/) html summary report that summarizes fastqc and kallisto results from mapping raw fastq files from Amorim *et al.,* (this study) to the human reference transcriptome.
+ - /QA/multiqc_report_Amorim_parasite.html - [multiqc](https://multiqc.info/) html summary report that summarizes fastqc and kallisto results from mapping de-hosted reads from Amorim *et al.,* (this study) to the *L. braziliensis* reference transcriptome.
+  - /QA/multiqc_report_Christensen_host.html - [multiqc](https://multiqc.info/) html summary report that summarizes fastqc and kallisto results from mapping raw fastq files from Christensen *et al.,* to the human reference transcriptome.
+ - /QA/multiqc_report_Christensen_parasite.html - [multiqc](https://multiqc.info/) html summary report that summarizes fastqc and kallisto results from mapping de-hosted reads from Christensen *et al.,* to the *L. braziliensis* reference transcriptome.
 
 ```
