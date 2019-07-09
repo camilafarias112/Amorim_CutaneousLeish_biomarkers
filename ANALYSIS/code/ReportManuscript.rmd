@@ -766,19 +766,6 @@ targets.onlypatients <- targets.onlypatients %>%
   dplyr::mutate(APOBEC3A = ViTALs_selected$APOBEC3A) %>%
   dplyr::mutate(KIR2DL4 = ViTALs_selected$KIR2DL4) %>%
   dplyr::mutate(IFNG = ViTALs_selected$IFNG)
-  
-ggplot(targets.onlypatients, aes(x=treatment_outcome, y=log2(parasiteTx_CPM_Amorim), fill=treatment_outcome)) +
-  geom_boxplot(outlier.shape = NA) +
-  labs(y="parasite transcripts (log2 CPM)", x = "Treatment outcome",
-       title = "Amorim et al. (this study)") +
-  geom_jitter(width = .05, size=3) +
-  theme_bw() +
-  theme(axis.text=element_text(size=16),
-        axis.title=element_text(size=18),
-        plot.title = element_text(face="bold"),
-        panel.border = element_rect(colour = "black", fill=NA, size=1),
-        panel.grid.major = element_blank(), 
-        panel.grid.minor = element_blank())
 
 #also storing this plot for use later
 p1 <- ggplot(targets.onlypatients, aes(x=treatment_outcome, y=log2(parasiteTx_CPM_Amorim), fill=treatment_outcome)) +
@@ -789,6 +776,19 @@ p1 <- ggplot(targets.onlypatients, aes(x=treatment_outcome, y=log2(parasiteTx_CP
   theme_bw() +
   theme(legend.position = "none",
         axis.text=element_text(size=16),
+        axis.title=element_text(size=18),
+        plot.title = element_text(face="bold"),
+        panel.border = element_rect(colour = "black", fill=NA, size=1),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank())
+  
+ggplot(targets.onlypatients, aes(x=treatment_outcome, y=log2(parasiteTx_CPM_Amorim), fill=treatment_outcome)) +
+  geom_boxplot(outlier.shape = NA) +
+  labs(y="parasite transcripts (log2 CPM)", x = "Treatment outcome",
+       title = "Amorim et al. (this study)") +
+  geom_jitter(width = .05, size=3) +
+  theme_bw() +
+  theme(axis.text=element_text(size=16),
         axis.title=element_text(size=18),
         plot.title = element_text(face="bold"),
         panel.border = element_rect(colour = "black", fill=NA, size=1),
@@ -805,7 +805,7 @@ p_PRF1 <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Amorim), y = 
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("PRF1 (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 8, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 8, label.y = 3, label.sep = "\n") +
   theme_bw() +
   theme(legend.position = "none",
         axis.text=element_text(size=12),
@@ -822,7 +822,7 @@ p_GZMB <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Amorim), y = 
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("GZMB (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 11, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 6, label.y = 4, label.sep = "\n") +
   theme_bw() +
   theme(legend.position = "none",
         axis.text=element_text(size=12),
@@ -839,7 +839,7 @@ p_GNLY <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Amorim), y = 
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("GNLY (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 12, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 6, label.y = 5, label.sep = "\n") +
   theme_bw() +
   theme(legend.position = "none",
         axis.text=element_text(size=12),
@@ -856,7 +856,7 @@ p_IFNG <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Amorim), y = 
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("IFNG (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 7.5, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 7, label.y = 1, label.sep = "\n") +
   theme_bw() +
   theme(legend.position = "none",
         axis.text=element_text(size=12),
@@ -873,7 +873,7 @@ p_UNC13A <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Amorim), y 
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("UNC13A (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 1.5, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 1, label.y = 1, label.sep = "\n") +
   theme_bw() +
   theme(legend.position = "none",
         axis.text=element_text(size=12),
@@ -890,7 +890,7 @@ p_APOBEC3A <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Amorim), 
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("APOBEC3A (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 9, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 6, label.y = 2, label.sep = "\n") +
   theme_bw() +
   theme(legend.position = "none",
         axis.text=element_text(size=12),
@@ -907,7 +907,7 @@ p_KIR2DL4 <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Amorim), y
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("KIR2DL4 (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 5, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 6, label.y = -2, label.sep = "\n") +
   theme_bw() +
   theme(legend.position = "none",
         axis.text=element_text(size=12),
@@ -924,7 +924,7 @@ p_CCL4 <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Amorim), y = 
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("CCL4 (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 10, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 7, label.y = 4, label.sep = "\n") +
   theme_bw() +
   theme(legend.position = "none",
         axis.text=element_text(size=12),
@@ -1182,7 +1182,7 @@ p_PRF1 <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Christensen),
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("PRF1 (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 8, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 9, label.y = 3, label.sep = "\n") +
   theme_bw() +
   xlim(6, 16) +
   theme(legend.position = "none",
@@ -1200,7 +1200,7 @@ p_GZMB <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Christensen),
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("GZMB (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 11, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 9, label.y = 6, label.sep = "\n") +
   theme_bw() +
   xlim(6, 16) +
   theme(legend.position = "none",
@@ -1218,7 +1218,7 @@ p_GNLY <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Christensen),
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("GNLY (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 12, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 9, label.y = 7, label.sep = "\n") +
   theme_bw() +
   xlim(6, 16) +
   theme(legend.position = "none",
@@ -1236,7 +1236,7 @@ p_IFNG <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Christensen),
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("IFNG (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 7.5, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 9, label.y = 2, label.sep = "\n") +
   theme_bw() +
   xlim(6, 16) +
   theme(legend.position = "none",
@@ -1254,7 +1254,7 @@ p_UNC13A <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Christensen
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("UNC13A (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 1.5, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 9, label.y = -4, label.sep = "\n") +
   theme_bw() +
   xlim(6, 16) +
   theme(legend.position = "none",
@@ -1272,7 +1272,7 @@ p_APOBEC3A <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Christens
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("APOBEC3A (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 9, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 9, label.y = 4, label.sep = "\n") +
   theme_bw() +
   xlim(6, 16) +
   theme(legend.position = "none",
@@ -1290,7 +1290,7 @@ p_KIR2DL4 <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Christense
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("KIR2DL4 (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 5, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 9, label.y = 0, label.sep = "\n") +
   theme_bw() +
   xlim(6, 16) +
   theme(legend.position = "none",
@@ -1308,7 +1308,7 @@ p_CCL4 <- ggplot(targets.onlypatients, aes(x = log2(parasiteTx_CPM_Christensen),
   xlab("parasite transcripts \n(log2 CPM)") +
   ylab("CCL4 (log2 CPM)") +
   geom_smooth(method='lm') +
-  stat_cor(method = "pearson", label.x = 1, label.y = 10, label.sep = "\n") +
+  stat_cor(method = "pearson", label.x = 9, label.y = 5.5, label.sep = "\n") +
   theme_bw() +
   xlim(6, 16) +
   theme(legend.position = "none",

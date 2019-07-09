@@ -1,2 +1,7 @@
 #ignoring directory with all the kallisto outputs for human read mapping
 human/
+#ignoring R project files that can be large in size
+.Rproj.user
+.Rproj
+.Rhistory
+.RData
