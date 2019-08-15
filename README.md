@@ -8,7 +8,7 @@ Patients infected with Leishmania braziliensis develop chronic lesions that ofte
 
 > The locations of the core components of this repo are outlined in the file system map below. In short, there are the following main directories:
 
- - /ANALYSIS/code - contains the Rmarkdown (.rmd) file that combines all code and outputs and was used to generate the supplementary code file included in the manuscript the pipeline.  All code for manuscript figures based on RNAseq data are included in this document.
+ - /ANALYSIS/code - contains the Rmarkdown (.rmd) file that combines all code and outputs and was used to generate the supplementary code file included in the manuscript the pipeline.  All code for manuscript figures based on RNAseq data are included in this document.  Also contains the study design files that describe each sample.
  - /ANALYSIS/readMapping/human - includes Kallisto outputs and log files for mapping of raw fastq files from Amorim et al., (this study) to the human reference transcriptome.  This directory is listed in the .gitingore due to restrictions on file and repo size set by GitHub.
   - /ANALYSIS/readMapping/Lbraz - Kallisto outputs and log files for mapping of de-hosted reads from Amorim *et al.* (this study) to the *L. braziliensis* reference transcriptome.
  - /ANALYSIS/Christensen_plosNTD_2016/human - Kallisto outputs and log files for mapping of raw fastq files from Christensen *et al.*, to the human reference transcriptome.  This directory is listed in the .gitingore due to restrictions on file and repo size set by GitHub.
