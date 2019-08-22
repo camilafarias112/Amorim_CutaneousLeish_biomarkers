@@ -1,6 +1,6 @@
 ---
 title: "<center> Supplemental code file for manuscript titled: Variable gene expression and parasite load predict treatment outcome in cutaneous leishmaniasis <center>"
-author: "<center> Camila Farias Amorim, Fernanda O. Novais, Ba Nguyen, Ana M. Misic, Lucas P. Carvalho, Edgar M. Carvalho, Daniel P. Beiting*, Phillip Scott* <center><br>"
+author: "<center> Camila Farias Amorim, Fernanda O. Novais, Ba T. Nguyen, Ana M. Misic, Lucas P. Carvalho, Edgar M. Carvalho, Daniel P. Beiting*, Phillip Scott* <center><br>"
 date: "<center> produced on _`r Sys.Date()`_ <center>"
 output:
   html_document:
@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo=TRUE, warning=FALSE, message=FALSE, linewidth=60)
 ```
 
 # Background
-Patients infected with *Leishmania braziliensis* develop chronic lesions that often fail to respond to treatment. To determine whether genes whose expression is highly variable in lesions might influence disease outcome, we obtained biopsies of lesions from patients prior to drug treatment, performed transcriptomic profiling, and identified highly variable genes whose expression correlated with treatment outcome.  Amongst the most variable genes were components of the cytolytic pathway, the expression of which appeared to be driven by parasite load in the skin. We demonstrated that treatment failure can be directly linked to the cytolytic pathway activated during infection. Using this host-pathogen biomarker profile, we show that treatment outcome can be predicted before the start of treatment.  These findings not only raise the possibility of point-of-care diagnostic screening to identify patients at high risk of treatment failure and provide a rationale for a precision medicine approach to drug selection in cutaneous leishmaniasis, but more broadly also demonstrate the value of identifying genes of high variability in other diseases to better understand and predict diverse clinical outcomes.  
+Patients infected with *Leishmania braziliensis* develop chronic lesions that often fail to respond to treatment with anti-parasite drugs. To determine whether genes whose expression is highly variable in lesions between patients might influence disease outcome, we obtained biopsies of lesions from patients prior to treatment with pentavalent antimony, performed transcriptomic profiling, and identified highly variable genes whose expression correlated with treatment outcome.  Amongst the most variable genes in all the patients were components of the cytolytic pathway, the expression of which  correlated with parasite load in the skin. We demonstrated that treatment failure was linked to the cytolytic pathway activated during infection. Using a host-pathogen biomarker profile ofof as few as 3x genes, we showed that eventual treatment outcome could be predicted before the start of treatment in two separate patient cohorts (n=46 total).  These findings raise the possibility of point-of-care diagnostic screening to identify patients at high risk of treatment failure and provide a rationale for a precision medicine approach to drug selection in cutaneous leishmaniasis, and more broadly demonstrate the value of identifying genes of high variability in other diseases to better understand and predict diverse clinical outcomes.  
 
 The code below shows how raw data was processed, mapped, and analyzed to identify potential biomarkers for treatment outcome in Cutaneous Leishmaniasis.  This markdown report is configured to be compiled as a PDF, but if the yaml header above is replaced with the header in the `html_yaml.txt' located in the same directory as this markdown document, then it can be compiled as an HTML file.
 
@@ -288,7 +288,7 @@ ggplot(data.frame, aes(x=PC1, y=PC2, color=factor(targets.lesion$disease))) +
         axis.text.x = element_text(size = 15, vjust = 0.5), 
         axis.text.y = element_text(size = 15), axis.title = element_text(size = 15),
         legend.position="none") +
-  scale_color_manual(values = c("#107F40","#EB512C")) +
+  scale_color_manual(values = c("#073F80","#EB512C")) +
   annotate("text", x=-50, y=80, label=paste("Permanova Pr(>F) =",
                                             vegan[1,5]), size=3, fontface="bold") +
   xlab(paste("PC1 -",pc.per[1],"%")) +
@@ -582,10 +582,10 @@ ggplot(merged1, aes(x=2^logFC, y=-log10(P.Value),
   labs(size="CV") +
   geom_text_repel(aes(label = siginfo),
                   size = 2,
-                  fontface="bold",
+                  fontface=4,
                   color="black") +
   geom_text_repel(aes(label = bothdata),
-                  size = 2.8, fontface="bold", color="#3A7D46") +
+                  size = 2.8, fontface=4, color="purple") +
   scale_y_continuous(limits=c(0,4)) +
   scale_x_continuous(limits=c(0,4), breaks = c(0,0.5,1,1.5,2,2.5,3,3.5,4)) +
   geom_hline(yintercept = -log10(0.01), linetype=2) +
